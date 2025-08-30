@@ -1,0 +1,166 @@
+2025-08-30T00:10:13.614+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-582] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T00:10:14.957+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-582] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5dbfe894: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T00:10:15.128+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-583] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T00:10:17.009+05:30  WARN 38388 --- [product-service] [HikariPool-1:connection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (d1dd5ab7-5d63-47b9-a6ff-63e62ce8a8a7)
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.7.jar:42.7.7]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.1.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:665) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.7.jar:42.7.7]
+	... 14 common frames omitted
+
+2025-08-30T00:10:20.417+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-583] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T00:10:20.417+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-583] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@50094794: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T00:10:20.577+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-584] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T00:10:25.763+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-584] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T00:10:25.763+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-584] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@75087b04: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T00:10:25.774+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-585] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T00:10:30.950+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-585] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T00:10:30.953+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-585] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@347f9c45: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T00:10:31.076+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-586] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:02:55.665+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-586] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:02:55.849+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-586] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4d5d5e52: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:02:56.163+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-587] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:02:57.194+05:30  WARN 38388 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h52m51s513ms789µs300ns).
+2025-08-30T09:02:58.294+05:30  WARN 38388 --- [product-service] [HikariPool-1:connection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (a8ced414-fd3e-4c68-b9b8-bb87ad01d063)
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.7.jar:42.7.7]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.1.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:665) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.7.jar:42.7.7]
+	... 14 common frames omitted
+
+2025-08-30T09:03:01.643+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-587] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:01.653+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-587] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@74d75530: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:01.953+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-588] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:07.019+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-588] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:07.021+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-588] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@220ec5e2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:07.354+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-589] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:12.455+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-589] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:12.498+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-589] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@17d78dad: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:13.337+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-590] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:18.446+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-590] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:18.448+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-590] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7421ea90: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:18.515+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-591] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:23.573+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-591] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:23.587+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-591] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@de86121: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:23.768+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-592] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:28.918+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-592] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:28.998+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-592] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7fa947b7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:30.927+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-593] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:36.569+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-593] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:37.028+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-593] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@f7ae840: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:38.932+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-594] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:44.330+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-594] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:44.437+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-594] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4ef4c1c0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:45.131+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-595] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:50.210+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-595] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:50.335+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-595] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@30c0eab6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:51.142+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-596] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:03:56.229+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-596] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:03:56.313+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-596] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@33f1bba8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:03:56.819+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-597] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:01.885+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-597] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:02.100+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-597] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3f04cfb4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:02.258+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-598] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:07.323+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-598] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:07.479+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-598] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5b56c240: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:08.000+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-599] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:07.022+05:30  WARN 38388 --- [product-service] [HikariPool-1:connection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (668af948-13b5-4240-b456-9b38aff1ea24)
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.7.jar:42.7.7]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.1.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:665) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.7.jar:42.7.7]
+	... 14 common frames omitted
+
+2025-08-30T09:04:13.206+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-599] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:13.212+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-599] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5f421542: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:15.252+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-600] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:20.438+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-600] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:20.440+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-600] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@538f3d8b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:20.461+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-601] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:25.593+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-601] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:25.594+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-601] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@57f4d1e9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:25.603+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-602] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:30.657+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-602] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:30.666+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-602] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1e4ba6ff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:30.731+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-603] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:35.864+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-603] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:35.866+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-603] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@37b91c43: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:35.892+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-604] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:40.913+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-604] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:40.914+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-604] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@76c97ff3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:41.008+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-605] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-30T09:04:46.144+05:30  WARN 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-605] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-08-30T09:04:46.145+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-605] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@186e38ce: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-08-30T09:04:46.463+05:30  INFO 38388 --- [product-service] [springCloudBus.anonymous.Wu5Up82PTNGquj5ehWhGdQ-606] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
