@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/EcomEureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GateWay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NotificationMessage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ResponceMessage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/configServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/src/main/java" charset="UTF-8" />

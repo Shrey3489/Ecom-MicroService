@@ -8,9 +8,9 @@ import com.ShreyEcom_micro_App.Order.Entity.CartItem;
 import com.ShreyEcom_micro_App.Order.Repository.CartItemRepository;
 import com.ShreyEcom_micro_App.Order.clients.ProductServiceClient;
 import com.ShreyEcom_micro_App.Order.clients.UserServiceClient;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.retry.annotation.CircuitBreaker;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -27,7 +27,7 @@ public class cartItemService
     private final ProductServiceClient productServiceClient;
     private final UserServiceClient userServiceClient;
 
-    @CircuitBreaker(name = "productService")
+    @CircuitBreaker(name = "productservice", fallbackMethod = "addtoCartFallBack")
     public boolean addToCart(Long userId, CartItemRequestDto cartItemRequest)
     {
         ProductResponseDto productResponseDto = productServiceClient.getProductDetail(cartItemRequest.getProductId());
@@ -44,7 +44,7 @@ public class cartItemService
         if(existingCart != null)
         {
             existingCart.setQuantity(existingCart.getQuantity() + cartItemRequest.getQuantity());
-            existingCart.setPrice(BigDecimal.valueOf(1000));
+            existingCart.setPrice(productResponseDto.getPrice());
             cartItemRepository.save(existingCart);
         }
         else
@@ -52,12 +52,20 @@ public class cartItemService
             CartItem cartItem1 = new CartItem();
             cartItem1.setProductId(cartItemRequest.getProductId());
             cartItem1.setQuantity(cartItemRequest.getQuantity());
-            cartItem1.setPrice(BigDecimal.valueOf(1000.00));
+            cartItem1.setPrice(productResponseDto.getPrice());
             cartItem1.setUserId(userId);
             cartItemRepository.save(cartItem1);
         }
 
         return true;
+    }
+
+    public boolean addtoCartFallBack(Long userId,
+                                     CartItemRequestDto cartItemRequest
+                                     , Exception exception)
+    {
+        System.out.println("addtoCartFallBack");
+        return false;
     }
 
     public boolean deleteItemFromCart(Long userId, Long productId)

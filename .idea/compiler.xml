@@ -22,9 +22,19 @@
         <module name="user" />
         <module name="product" />
       </profile>
+      <profile name="Annotation profile for NotificationMessage" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="NotificationMessage" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="EurekaDemo" target="21" />
+      <module name="ResponceMessage" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -32,7 +42,9 @@
       <module name="EcomEureka" options="-parameters" />
       <module name="EurekaDemo" options="-parameters" />
       <module name="GateWay" options="-parameters" />
+      <module name="NotificationMessage" options="-parameters" />
       <module name="Order" options="-parameters" />
+      <module name="ResponceMessage" options="-parameters" />
       <module name="configServer" options="-parameters" />
       <module name="product" options="-parameters" />
       <module name="user" options="-parameters" />
